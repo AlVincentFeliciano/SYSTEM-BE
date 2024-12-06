@@ -1,8 +1,9 @@
 const Course = require("../models/Course-Model.js");
 
 module.exports.addCourse = (req, res) => {
-    let{name, description, price} = req.body;
+    let{name, description, price, imgLink} = req.body;
     let newCourse = new Course({
+        imgLink: imgLink,
         name: name,
         description: description,
         price: price
