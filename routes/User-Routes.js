@@ -13,13 +13,17 @@ router.post("/login", userController.loginUser);
 // Check if email exists
 router.post("/check-email", userController.checkEmail);
 
-// Get user details
+// Get user details (POST method)
 router.post("/details", verify, userController.getProfile);
+
+// Get user details (GET method)
+router.get("/details", verify, userController.getProfile);
 
 // Get user details
 router.post("/enroll", verify, userController.enroll);
 
-
+// update password
+router.put("/update-password", verify, userController.updatePassword);
 
 
 
